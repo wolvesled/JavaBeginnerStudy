@@ -14,9 +14,9 @@ class NoBreak {
 				case 3:
 					System.out.println("i is three");
 				case 4:
-				  System.out.println("i is four");
+					System.out.println("i is four");
 				case 5:
-				  System.out.println("i is five");
+					System.out.println("i is five");
 			}
 			System.out.println();
 		}
