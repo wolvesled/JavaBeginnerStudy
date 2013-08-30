@@ -4,9 +4,9 @@ class Break4 {
 		int i;
 		
 		for(i=1; i<4; i++) {
-one:	{
-two:		{
-three:		{
+one:			{
+two:				{
+three:					{
 						System.out.println("\ni is " + i);
 						if(i==1) break one;
 						if(i==2) break two;
