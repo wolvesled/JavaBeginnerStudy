@@ -42,7 +42,7 @@ class Triangle extends TwoDShape {
   }
 }
 
-class Shapes3 {
+class Shapes4 {
   public static void main(String args[]) {
     Triangle t1 = new Triangle("isosceles", 4.0, 4.0);
     Triangle t2 = new Triangle("right", 8.0, 12.0);
