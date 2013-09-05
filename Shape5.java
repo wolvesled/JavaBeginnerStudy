@@ -1,0 +1,96 @@
+// Add more constructors to TwoDShape.
+
+// A class for two-dimensional objects.
+class TwoDShape {
+  private double width;  // these are
+  private double height; // now private
+  
+  // A default constructor.
+  TwoDShape() {
+    width = height = 0.0;
+  }
+  
+  // Parameterized constructor.
+  TwoDShape(double w, double h) {
+    width = w;
+    height = h;
+  }
+  
+  // Construct object with equal width and height.
+  TwoDShape(double x) {
+    width = height = x;
+  }
+  
+  // Accessor methods for width and height.
+  double getWidth() { return width; }
+  double getHeight() { return height; }
+  void setWidth(double w) { width = w; }
+  void setHeight(double h) { height = h; }
+  
+  void showDim() {
+    System.out.println("Width and height are " + width + " and " + height);
+  }
+}
+
+// A subclass of TwoDShape for triangles.
+class Triangle extends TwoDShape {
+  private String style;
+  
+  // A default constructor.
+  Triangle() {
+    super();
+    style = "null";
+  }
+  
+  //Constructor
+  Triangle(String s, double w, double h) {
+    super(w, h); // call superclass constructor
+    
+    style = s;
+  }
+  
+  // Construct an isoceles triangle.
+  Triangle(double x) {
+    super(x); // call superclass constructor
+    style = "isosceles";
+  }
+  
+  double area () {
+    return getWidth() * getHeight() / 2;
+  }
+  
+  void showStyle() {
+    System.out.println("Triangle is " + style);
+  }
+}
+
+class Shapes5 {
+  public static void main(String args[]) {
+    Triangle t1 = new Triangle();
+    Triangle t2 = new Triangle("right", 8.0, 12.0);
+    Triangle t3 = new Triangle(4.0);
+    
+    t1 = t2;
+    
+    System.out.println("Info for t1: ");
+    t1.showStyle();
+    t1.showDim();
+    System.out.println("Area is " + t1.area());
+    
+    System.out.println();
+    
+    System.out.println("Info for t2: ");
+    t2.showStyle();
+    t2.showDim();
+    System.out.println("Area is " + t2.area());
+    
+    System.out.println();
+    
+    System.out.println("Info for t3: ");
+    t3.showStyle();
+    t3.showDim();
+    System.out.println("Area is " + t3.area());
+    
+    System.out.println();
+  }
+}
